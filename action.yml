@@ -1,0 +1,10 @@
+name: 'Hello World'
+description: 'Greet someone and record the time'
+on:
+  schedule:
+    - cron: "0 7 * * *"
+runs:
+  using: 'docker'
+  image: 'yindan/genshinhelper:latest'
+  env:
+    COOKIE_HOYOLAB: ${{ secrets.COOKIE_HOYOLAB }}
