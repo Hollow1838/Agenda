@@ -13,7 +13,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: docker://yindan/genshinhelper:latest
-        with:
+        env:
           COOKIE_HOYOLAB: ${{ secrets.COOKIE_HOYOLAB }}
 #       - name: Check out repository
 #         uses: actions/checkout@v2
