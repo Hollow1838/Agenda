@@ -12,9 +12,10 @@ jobs:
   Genshin-Check:
     runs-on: ubuntu-latest
     steps:
-      - uses: docker://yindan/genshinhelper:latest
-        env:
-          COOKIE_HOYOLAB: ${{ secrets.COOKIE_HOYOLAB }}
+    - run: "docker run -d --name=genshinhelper -e COOKIE_HOYOLAB=\"${{ secrets.COOKIE_HOYOLAB }}\" yindan/genshinhelper:latest"
+#       - uses: docker://yindan/genshinhelper:latest
+#         env:
+#           COOKIE_HOYOLAB: ${{ secrets.COOKIE_HOYOLAB }}
 #       - name: Check out repository
 #         uses: actions/checkout@v2
 #       - name: Use local my-action
