@@ -12,7 +12,7 @@ jobs:
   Genshin-Check:
     runs-on: ubuntu-latest
     steps:
-    - run: "docker run -d --name=genshinhelper -e COOKIE_HOYOLAB=\"${{ secrets.COOKIE_HOYOLAB }}\" yindan/genshinhelper:latest && sleep 10 && docker logs genshinhelper"
+    - run: "docker run -d --name=genshinhelper -e COOKIE_HOYOLAB=\"${{ secrets.COOKIE_HOYOLAB }}\" yindan/genshinhelper:latest && sleep 20 && docker logs genshinhelper"
 #       - uses: docker://yindan/genshinhelper:latest
 #         env:
 #           COOKIE_HOYOLAB: ${{ secrets.COOKIE_HOYOLAB }}
